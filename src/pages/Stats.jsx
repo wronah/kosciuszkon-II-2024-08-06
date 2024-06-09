@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MapComponent from "../components/MapComponent";
 
 import React, { Component } from "react";
 
@@ -23,6 +24,7 @@ export default class Stats extends Component {
           </table>
         </section>
         <section className="charts">
+          <MapComponent />
           <h2>Zuzycie energii</h2>
           <h1 className="usage">1000kWh</h1>
           <h2>Rekuperacja</h2>
