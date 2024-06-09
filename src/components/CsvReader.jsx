@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { supabase } from "../createClient";
+import { Input } from "../components/shadcn/ui/input";
 
 const CsvReader = () => {
   const [data, setData] = useState([]);
@@ -54,7 +55,7 @@ const CsvReader = () => {
   };
   return (
     <div>
-      <input type="file" accept=".csv" onChange={handleFileChange} />
+      <Input type="file" accept=".csv" onChange={handleFileChange} />
       <h3>File: {fileName}</h3>
       {data.length > 0 && (
         <table border="1">
