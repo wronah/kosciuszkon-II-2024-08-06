@@ -5,6 +5,7 @@ import "@/App.css";
 import Usage from "../components/Usage";
 import { Award } from "lucide-react"
 import React, { Component } from "react";
+import chart from "@/assets/chart.png";
 
 export default class Stats extends Component {
   render() {
@@ -29,49 +30,45 @@ export default class Stats extends Component {
           </table>
         </section>
         <section className="charts px-12 py-4 w-full">
-          <div className="flex md:flex-row flex-col justify-between items-center w-full ">
+          <div className="flex md:flex-row flex-col gap-5 justify-between items-center w-full ">
             <MapComponent />
-            <div>placeholder for chart</div>
+            <img src={chart} alt="chart" style={{ minWidth: "200px" }} />
           </div>
-          <div className="flex flex-row gap-10 justify-center items-center w-full">
-            <div>
-              <h2>Zużycie energii</h2>
-              <h1 className="usage">1000kWh</h1>
-            </div>
-            <div>
-              <h2>Rekuperacja</h2>
-              <h1 className="usage">1000kWh</h1>
-            </div>
+          <div className="flex md:flex-row flex-col md:gap-10 gap-5 mt-5 justify-center items-center w-full">
+              <Usage />
           </div>
         </section>
         <section className="ranking">
-          <table className="table">
+          <table className="table ml-2 mr-2 mb-2">
             <th>Najlepsze przejazdy</th>
             <tr>
-              <td>
-                <img src="./assets/avatar.png" alt="" />
+              <td className="flex flex-row justify-between items-center">
                 Will Smith
+                <Award size={16} color="#F9Ad0e" />
               </td>
             </tr>
             <tr>
-              <td>Hubert Wrona</td>
-            </tr>
-            <tr>
-              <td>
-                <img src="./assets/avatar.png" alt="" />
-                Will Smith
+              <td className="flex flex-row justify-between items-center">
+                Elon Musk
+                <Award size={16} color="#d1d1d1" />
               </td>
             </tr>
             <tr>
-              <td>
-                <img src="./assets/avatar.png" alt="" />
-                Will Smith
+              <td className="flex flex-row justify-between items-center">
+                Andrew Tate
+                <Award size={16} color="#cd7e32" />
               </td>
             </tr>
             <tr>
-              <td>
-                <img src="./assets/avatar.png" alt="" />
-                Will Smith
+              <td className="flex flex-row justify-between items-center">
+                Cristiano Ronaldo
+                <div>4.</div>
+              </td>
+            </tr>
+            <tr>
+              <td className="flex flex-row justify-between items-center">
+                Usain Bolt
+                <div>5.</div>
               </td>
             </tr>
           </table>

@@ -50,6 +50,12 @@ label {
     width: 100% !important;
     height: 100% !important;
   }
+  .usage-wrapper {
+    width: 100%;
+  }
+  h2 {
+    text-align: center;
+  }
 }
 
 .elipse-1 {

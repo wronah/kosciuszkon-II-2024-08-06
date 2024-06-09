@@ -1,6 +1,7 @@
 // MyComponent.jsx
 import React, { useRef, useEffect, useState, setError } from "react";
 import { supabase } from "../createClient";
+import "@/App.css";
 
 const Usage = () => {
   const [dataN, setDataN] = useState([]);
@@ -49,14 +50,18 @@ const Usage = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Zuzycie energii</h2>
-      <h1 className="usage">{(totalEnergiaWejsciowa - totalEnergiaWyjsciowa).toFixed(2)}</h1>
-      <h2>Rekuperacja</h2>
-      <h1 className="usage">
-        {((totalEnergiaWejsciowa - totalEnergiaWyjsciowa) / totalEnergiaWejsciowa).toFixed(2) * 100}%
-      </h1>
-    </div>
+    <>
+      <div className="usage-wrapper">
+        <h2>Zużycie energii</h2>
+        <h1 className="usage">{(totalEnergiaWejsciowa - totalEnergiaWyjsciowa).toFixed(2)}</h1>
+      </div>
+      <div className="usage-wrapper">
+        <h2>Rekuperacja</h2>
+        <h1 className="usage">
+          {((totalEnergiaWejsciowa - totalEnergiaWyjsciowa) / totalEnergiaWejsciowa).toFixed(2) * 100}%
+        </h1>
+      </div>  
+    </>
   );
 };
 
