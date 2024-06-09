@@ -16,7 +16,7 @@ function Home() {
         <CsvReader />
       </header>
       <main>
-        <h1 className="big-text">RAIL RIVALS</h1>
+        <h1 className="big-text text-white">RAIL RIVALS</h1>
         <div className="cursor-pointer w-full flex flex-row justify-center" onClick={goToNewPage}>
           <Select />
         </div>

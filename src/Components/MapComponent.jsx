@@ -88,7 +88,7 @@ const MapComponent = () => {
   }, [stationsData, dataN]);
 
   return (
-    <div ref={mapContainerRef} id="map-container" style={{ height: "400px", width: "400px", borderRadius: "30px" }} />
+    <div ref={mapContainerRef} id="map-container" style={{ minHeight: "300px", minWidth: "300px", height: "400px", width: "400px", borderRadius: "30px" }} />
   );
 };
 

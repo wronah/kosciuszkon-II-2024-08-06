@@ -39,13 +39,16 @@ label {
 .big-text {
   font-size: 6rem;
   font-weight: bold;
-  color: white;
   text-align: center;
 }
 
 @media (max-width: 768px) {
   .big-text {
     font-size: 3rem;
+  }
+  #map-container {
+    width: 100% !important;
+    height: 100% !important;
   }
 }
 
@@ -82,25 +85,26 @@ label {
   font-weight: bold;
   margin-bottom: 5%;
 }
-table {
-  width: 40%;
-}
 
 th {
   width: 40%;
   background-color: #119da4;
   color: white;
-  font-size: 40px;
+  font-size: 16px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  padding: 1rem;
+  padding: 0.5rem;
+}
+
+table {
+  border-collapse: collapse;
 }
 
 td {
   background-color: #f9f9f9;
   border: solid 1px #d7d9ce;
   padding: 0.5rem;
-  font-size: 24px;
+  font-size: 12px;
   font-weight: bold;
 }
 
@@ -125,13 +129,14 @@ td {
 }
 
 h2 {
-  font-size: 40px !important;
+  font-size: 36px !important;
   font-weight: bold !important;
 }
 
 .usage {
-  font-size: 64px;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: bold;  
+  text-align: center;
 }
 
 .heading {
