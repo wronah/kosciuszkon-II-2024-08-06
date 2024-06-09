@@ -56,27 +56,6 @@ const CsvReader = () => {
   return (
     <div>
       <Input type="file" accept=".csv" onChange={handleFileChange} />
-      <h3>File: {fileName}</h3>
-      {data.length > 0 && (
-        <table border="1">
-          <thead>
-            <tr>
-              {Object.keys(data[0]).map((key) => (
-                <th key={key}>{key}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((row, index) => (
-              <tr key={index}>
-                {Object.values(row).map((val, i) => (
-                  <td key={i}>{val}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
     </div>
   );
 };
