@@ -18,7 +18,7 @@ export default class Stats extends Component {
             <tr>
               <td className="flex flex-row justify-between items-center">
                 Will Smith
-                <Award size={16} color="gold" />
+                <Award size={16} color="#F9Ad0e" />
               </td>
             </tr>
             <tr>
