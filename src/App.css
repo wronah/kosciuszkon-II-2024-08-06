@@ -1,5 +1,5 @@
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .App {
@@ -24,7 +24,7 @@ body {
 
 .big-text {
   font-size: 8rem;
-  font-weight: 700;
+  font-weight: bold;
   color: white;
   text-align: center;
 }
@@ -57,7 +57,8 @@ body {
 
 .header {
   font-size: 64px;
-  font-weight: 700;
+  font-weight: bold;
+  margin-bottom: 5%;
 }
 table {
   width: 40%;
@@ -78,5 +79,44 @@ td {
   border: solid 1px #d7d9ce;
   padding: 0.5rem;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: bold;
+}
+
+.charts {
+  width: 100%;
+  color: white;
+  background-color: #119da4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.ranking {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 40px !important;
+  font-weight: bold !important;
+}
+
+.usage {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
 }
