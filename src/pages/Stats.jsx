@@ -2,8 +2,8 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MapComponent from "../components/MapComponent";
 import "@/App.css";
+import Usage from "../components/Usage";
 import { Award } from "lucide-react"
-
 import React, { Component } from "react";
 
 export default class Stats extends Component {
