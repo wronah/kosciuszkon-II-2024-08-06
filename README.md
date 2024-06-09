@@ -27,3 +27,12 @@ Rail Rivals is an application designed to rank the best railway workers based on
 - **Monthly Rankings of the Best Employees:** Based on various criteria, such as punctuality or passenger ratings.
 - **Motivational Programs:** Awards and distinctions for the best employees of the month or year.
 - **Progress Monitoring:** Tracking the development and progress of individual railway workers.
+
+## Tech Stack
+
+- **React
+- **SupaBase
+- **shadcn/ui
+- **Leaflet
+- **Tailwind CSS
+- **lucide.dev
