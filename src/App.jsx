@@ -9,7 +9,6 @@ function Home() {
   const goToNewPage = () => {
     navigate("/stats");
   };
-
   return (
     <div className="App">
       <h1 className="big-text">RAIL RIVALS</h1>
