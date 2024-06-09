@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, setError } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { supabase } from "../createClient";
@@ -11,6 +11,8 @@ const MapComponent = () => {
   const [dataN, setDataN] = useState([]);
   const [stationsData, setStationsData] = useState([]);
 
+  // Define marker data
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -19,26 +21,18 @@ const MapComponent = () => {
         if (error) {
           throw error;
         }
-
-        let { data: fetchedStationsData, error: stationsError } = await supabase
+        let { data: stationsData, error: stationsError } = await supabase
           .from("stations")
           .select("nazwa_stacji, gps_n, gps_e, typ_obiektu");
-
-        if (stationsError) {
-          throw stationsError;
-        }
-
-        const filteredStationsData = fetchedStationsData.filter(({ typ_obiektu }) => typ_obiektu === "Kolej");
+        const filteredStationsData = stationsData.filter(({ typ_obiektu }) => typ_obiektu === "Kolej");
         const mappedStationsData = filteredStationsData.map(({ nazwa_stacji, gps_n, gps_e, typ_obiektu }) => ({
           nazwa_stacji,
           gps_n,
           gps_e,
           typ_obiektu,
         }));
-
         setStationsData(mappedStationsData);
         setDataN(data.map((item) => [item.szerokosc_geo, item.dlugosc_geo]));
-        console.log(mappedStationsData);
       } catch (error) {
         console.log(error.message);
       }
@@ -46,7 +40,6 @@ const MapComponent = () => {
 
     fetchData();
   }, []);
-
   useEffect(() => {
     // Initialize Leaflet map after component mounts
     mapRef.current = L.map(mapContainerRef.current, {
@@ -88,7 +81,7 @@ const MapComponent = () => {
   }, [stationsData, dataN]);
 
   return (
-    <div ref={mapContainerRef} id="map-container" style={{ height: "400px", width: "400px", borderRadius: "30px" }} />
+    <div ref={mapContainerRef} id="map-container" style={{ minHeight: "300px", minWidth: "300px", height: "400px", width: "400px", borderRadius: "30px" }} />
   );
 };
 
