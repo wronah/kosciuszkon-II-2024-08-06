@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { supabase } from "../createClient";
 import { Input } from "../components/shadcn/ui/input";
+import { Plus } from "lucide-react"
 
 const CsvReader = () => {
   const [data, setData] = useState([]);
@@ -55,7 +56,11 @@ const CsvReader = () => {
   };
   return (
     <div>
-      <Input type="file" accept=".csv" onChange={handleFileChange} />
+      <input type="file" id="csv-input" accept=".csv" onChange={handleFileChange} hidden />
+      <label htmlFor="csv-input" className="add-csv-button flex flex-row items-center gap-1">
+        <div className="text-white text-sm">Import .csv</div>
+        <Plus size={30} color="white" />
+      </label>
     </div>
   );
 };

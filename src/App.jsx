@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import CsvReader from "./components/CsvReader";
+import Select from "./components/Select";
 import Stats from "./pages/Stats";
 import "./App.css";
 
@@ -10,15 +11,19 @@ function Home() {
     navigate("/stats");
   };
   return (
-    <div className="App">
-      <h1 className="big-text">RAIL RIVALS</h1>
-      <CsvReader />
-      <div className="elipse-1"></div>
-      <div className="elipse-2"></div>
-      <button onClick={goToNewPage} className="btn">
-        Go to Customer Page
-      </button>
-    </div>
+    <>
+      <header>
+        <CsvReader />
+      </header>
+      <main>
+        <h1 className="big-text">RAIL RIVALS</h1>
+        <div className="cursor-pointer w-full flex flex-row justify-center" onClick={goToNewPage}>
+          <Select />
+        </div>
+        <div className="elipse-1"></div>
+        <div className="elipse-2"></div>
+      </main>
+    </>
   );
 }
 
