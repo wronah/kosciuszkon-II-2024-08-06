@@ -58,6 +58,10 @@ label {
   }
 }
 
+.shadow {
+  text-shadow: 0 0 20px black;
+}
+
 .elipse-1 {
   border-radius: 50%;
   width: 860px;
