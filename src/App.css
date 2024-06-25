@@ -59,7 +59,7 @@ label {
 }
 
 .shadow {
-  text-shadow: 0 0 20px black;
+  text-shadow: 0 0 22px rgba(0, 0, 0, 0.8);
 }
 
 .elipse-1 {
